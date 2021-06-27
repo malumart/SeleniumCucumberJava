@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,6 +22,7 @@ public class BasePage {
         ChromeOptions chromeOptions = new ChromeOptions();
         driver = new ChromeDriver(chromeOptions);
         wait = new WebDriverWait(driver, 10);
+        //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); ESPERA IMPLICITA
     }
 
     public BasePage(WebDriver driver){
@@ -71,5 +74,41 @@ public class BasePage {
     public void rightClick(String locator){
         action.contextClick(find(locator));
     }
+
+    public String getValueFromTable(String locator, int row, int column){
+        String cellINeed = locator+"/table/tbody/tr["+row+"]/td["+column+"]";
+        return find(cellINeed).getText();
+    }
+
+    public void setValueOnTable (String locator, int row, int column, String stringToSend){
+        String cellToFill = locator+"/table/tbody/tr["+row+"]/td["+column+"]";
+        find(cellToFill).sendKeys(stringToSend);
+    }
+
+    public void switchToiFrame(int iFrameIndex){
+        driver.switchTo().frame(iFrameIndex);
+    }
+
+    public void switchToParentFrame(){
+        driver.switchTo().parentFrame();
+    }
+
+    public void dismissAlert(){
+        driver.switchTo().alert().dismiss();
+    }
+
+    public String textFromElement(String locator){
+        return find(locator).getText();
+    }
+
+    public boolean elementIsDisplayed(String locator){
+
+        return find(locator).isDisplayed();
+    }
+
+    public List<WebElement> bringMeAllElements(String locator){
+        return driver.findElements(By.className(locator));
+    }
+
 }
 

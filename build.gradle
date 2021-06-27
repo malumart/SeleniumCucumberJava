@@ -13,8 +13,8 @@ repositories{
 
 dependencies{
 
-    // https://mvnrepository.com/artifact/junit/junit
-testImplementation group: 'junit', name: 'junit', version: '4.12'
+// https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
+testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.7.0'
 
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
 implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
@@ -22,11 +22,7 @@ implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version:
 // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
 implementation group: 'io.cucumber', name: 'cucumber-java', version: '6.10.2'
 
-// https://mvnrepository.com/artifact/info.cukes/cucumber-junit
-testImplementation group: 'info.cukes', name: 'cucumber-junit', version: '1.2.6', ext: 'pom'
-
 // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
-testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '6.10.2'
-
+testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '6.10.4'
 
 }
