@@ -22,6 +22,6 @@ public class GridSteps {
 
     @Then("^I can validate the table is displayed$")
     public void theTableIsThere(){
-        Assert.assertFalse("Exploto todo", grid.cellStatus());
+        Assert.assertTrue("Exploto todo", grid.cellStatus());
     }
 }
