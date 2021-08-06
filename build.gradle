@@ -14,16 +14,19 @@ repositories{
 dependencies{
 
 // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
-testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.7.0'
+testImplementation group: 'junit', name: 'junit', version: '4.12'
 
     // https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java
 implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
 
 // https://mvnrepository.com/artifact/io.cucumber/cucumber-java
-implementation group: 'io.cucumber', name: 'cucumber-java', version: '6.10.2'
+implementation group: 'io.cucumber', name: 'cucumber-java', version: '4.2.0'
 
 // https://mvnrepository.com/artifact/io.cucumber/cucumber-junit
-testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '6.10.4'
+testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '4.2.0'
+
+// https://mvnrepository.com/artifact/com.aventstack/extentreports-cucumber4-adapter
+implementation group: 'com.aventstack', name: 'extentreports-cucumber4-adapter', version: '1.0.7'
 
 }
 

@@ -2,8 +2,8 @@ package steps;
 
 import org.junit.Assert;
 
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
 import pages.GridPage;
 
 public class GridSteps {

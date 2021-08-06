@@ -14,7 +14,7 @@ pages/GridPage.java
  pages.GridPage
 steps/GridSteps.java
  steps.GridSteps
-steps/ListSteps.java
- steps.ListSteps
 runner/runner.java
  runner.runner
+steps/ListSteps.java
+ steps.ListSteps
